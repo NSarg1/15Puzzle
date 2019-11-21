@@ -1,22 +1,22 @@
 let rndNum, rndNumArr, doesExist, data;
 rndNumArr = [];
 data = [
-    { id: 0, num: 1 },
-    { id: 1, num: 2 },
-    { id: 2, num: 3 },
-    { id: 3, num: 4 },
-    { id: 4, num: 5 },
-    { id: 5, num: 6 },
-    { id: 6, num: 7 },
-    { id: 7, num: 8 },
-    { id: 8, num: 9 },
-    { id: 9, num: 10 },
-    { id: 10, num: 11 },
-    { id: 11, num: 12 },
-    { id: 12, num: 13 },
-    { id: 13, num: 14 },
-    { id: 14, num: 15 },
-    { id: 15, num: 16 }
+    { id: 0, num: 1, animate: null },
+    { id: 1, num: 2, animate: null },
+    { id: 2, num: 3, animate: null },
+    { id: 3, num: 4, animate: null },
+    { id: 4, num: 5, animate: null },
+    { id: 5, num: 6, animate: null },
+    { id: 6, num: 7, animate: null },
+    { id: 7, num: 8, animate: null },
+    { id: 8, num: 9, animate: null },
+    { id: 9, num: 10, animate: null },
+    { id: 10, num: 11, animate: null },
+    { id: 11, num: 12, animate: null },
+    { id: 12, num: 13, animate: null },
+    { id: 13, num: 14, animate: null },
+    { id: 14, num: 15, animate: null },
+    { id: 15, num: 16, animate: null }
 ];
 
 const rndNumGenerator = () => {

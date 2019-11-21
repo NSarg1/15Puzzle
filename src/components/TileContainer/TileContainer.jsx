@@ -1,15 +1,19 @@
-import React from 'react';
 import './TileContainer.scss';
+import React from 'react';
+import Tile from '../Tile/Tile';
 
 const TileContainer = ({ table, click }) => {
-    
     return (
         <div className="TileContainer">
             {table.map(tile => {
                 return (
-                    <div className="item item--1" key={tile.id} onClick={() => click(tile.id)}>
-                        {tile.num}
-                    </div>
+                    <Tile
+                        key={tile.id}
+                        click={click}
+                        id={tile.id}
+                        num={tile.num}
+                        animate={tile.animate}
+                    />
                 );
             })}
         </div>

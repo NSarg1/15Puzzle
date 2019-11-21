@@ -10,6 +10,21 @@ class App extends Component {
         };
     }
 
+    componentDidMount() {
+        let table = [...this.state.table];
+        table.findIndex(el => {
+            return el.num === null;
+        });
+    }
+
+    setToNull = () => {
+        let table = [...this.state.table];
+        table.forEach(el => {
+            el.animate = null;
+        });
+        this.setState({ table: table });
+    };
+
     changeNum = id => {
         let tileIndex = this.state.table.findIndex(el => {
             return el.id === id;
@@ -18,18 +33,23 @@ class App extends Component {
         const nullIndex = this.state.table.findIndex(el => {
             return el.num === null;
         });
+
         if (
             nullIndex - tileIndex === 1 ||
             nullIndex - tileIndex === 4 ||
             tileIndex - nullIndex === 1 ||
             tileIndex - nullIndex === 4
         ) {
+            this.setToNull();
             table[nullIndex].num = table[tileIndex].num;
+            if (nullIndex - tileIndex === 1) table[nullIndex].animate = 'slideToLeft';
+            if (nullIndex - tileIndex === 4) table[nullIndex].animate = 'slideToBottom';
+            if (tileIndex - nullIndex === 1) table[nullIndex].animate = 'slideToRight';
+            if (tileIndex - nullIndex === 4) table[nullIndex].animate = 'slideToTop';
+
+            this.setState({ table: table });
             table[tileIndex].num = null;
         }
-        setTimeout(() => {
-            this.setState({ table: table });
-        }, 1000);
     };
 
     render() {
