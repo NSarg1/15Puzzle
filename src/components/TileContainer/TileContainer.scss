@@ -1,0 +1,89 @@
+.TileContainer {
+    background-color: rgb(93, 134, 47);
+    padding: 20px;
+    text-align: center;
+    width: 500px;
+    height: 500px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    justify-content: center;
+    align-content: center;
+    cursor: pointer;
+    
+    .item {
+        background-color: rgb(195, 176, 0);
+        color: white;
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #000;
+
+        // &--1 {
+        //     grid-row: 1;
+        //     grid-column: 1;
+        // }
+        // &--2 {
+        //     grid-row: 1;
+        //     grid-column: 2;
+        // }
+        // &--3 {
+        //     grid-row: 1;
+        //     grid-column: 3;
+        // }
+        // &--4 {
+        //     grid-row: 1;
+        //     grid-column: 4;
+        // }
+        // &--5 {
+        //     grid-row: 2;
+        //     grid-column: 1;
+        // }
+        // &--6 {
+        //     grid-row: 2;
+        //     grid-column: 2;
+        // }
+        // &--7 {
+        //     grid-row: 2;
+        //     grid-column: 3;
+        // }
+        // &--8 {
+        //     grid-row: 2;
+        //     grid-column: 4;
+        // }
+        // &--9 {
+        //     grid-row: 3;
+        //     grid-column: 1;
+        // }
+        // &--10 {
+        //     grid-row: 3;
+        //     grid-column: 2;
+        // }
+        // &--11 {
+        //     grid-row: 3;
+        //     grid-column: 3;
+        // }
+        // &--12 {
+        //     grid-row: 3;
+        //     grid-column: 4;
+        // }
+        // &--13 {
+        //     grid-row: 4;
+        //     grid-column: 1;
+        // }
+        // &--14 {
+        //     grid-row: 4;
+        //     grid-column: 2;
+        // }
+        // &--15 {
+        //     grid-row: 4;
+        //     grid-column: 3;
+        // }
+        // &--16 {
+
+        // }
+    }
+}
