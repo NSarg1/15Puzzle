@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import TileContainer from './components/TileContainer/TileContainer';
-import {table} from "./container";
+import data from './RndNumGenerator';
 
 class App extends Component {
     constructor() {
         super();
         this.state = {
-            table: table
+            table: data
         };
     }
 
@@ -18,7 +18,6 @@ class App extends Component {
         const nullIndex = this.state.table.findIndex(el => {
             return el.num === null;
         });
-
         if (
             nullIndex - tileIndex === 1 ||
             nullIndex - tileIndex === 4 ||
@@ -28,7 +27,9 @@ class App extends Component {
             table[nullIndex].num = table[tileIndex].num;
             table[tileIndex].num = null;
         }
-        this.setState({ table: table });
+        setTimeout(() => {
+            this.setState({ table: table });
+        }, 1000);
     };
 
     render() {
