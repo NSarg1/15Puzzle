@@ -1,0 +1,14 @@
+@import "./sass/base/reset.scss";
+@import "./sass/abstracts/variables";
+@import "./sass/abstracts/mixins";
+
+
+@import "./sass/abstracts/animations.scss";
+ 
+@import "./sass/base/index.scss";
+
+
+@import "./sass/components/TileContainer.scss";
+@import "./sass/components/Tile.scss";
+
+@import "./sass/pages/App.scss";

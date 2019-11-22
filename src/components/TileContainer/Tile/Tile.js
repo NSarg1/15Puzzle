@@ -3,9 +3,9 @@ import React from 'react';
 const Tile = ({ num, id, click, animate }) => {
     let classes;
     if (num === null) {
-        classes = `item-${id} animated ${animate}`;
+        classes = `item-${num} animated ${animate}`;
     } else {
-        classes = `item item-${id} ${animate}`;
+        classes = `item item-${num} ${animate}`;
     }
 
     return (
