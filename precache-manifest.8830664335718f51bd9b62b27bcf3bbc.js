@@ -1,18 +1,18 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "500481c8a45e13fa4647e488ceeaf5f8",
+    "revision": "4e4a6147b673305a4f564aae7811e673",
     "url": "/15Puzzle/index.html"
   },
   {
-    "revision": "95f5e4be3f63526cf419",
-    "url": "/15Puzzle/static/css/main.81896f73.chunk.css"
+    "revision": "1e788682458f240a7cdf",
+    "url": "/15Puzzle/static/css/main.68e98306.chunk.css"
   },
   {
     "revision": "346f61a338614c8e0404",
     "url": "/15Puzzle/static/js/2.0ead719f.chunk.js"
   },
   {
-    "revision": "95f5e4be3f63526cf419",
+    "revision": "1e788682458f240a7cdf",
     "url": "/15Puzzle/static/js/main.ebbeca0a.chunk.js"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/15Puzzle/static/js/runtime-main.843573b5.js"
   },
   {
-    "revision": "9c3573ba613e0626a77eb0c4daad97b1",
-    "url": "/15Puzzle/static/media/Box.9c3573ba.jpg"
+    "revision": "812ef049fab2b5e3307da62916aa6183",
+    "url": "/15Puzzle/static/media/Box.812ef049.jpg"
   },
   {
     "revision": "cccbd9a891fd5566be4b8feda7db97ba",
@@ -44,8 +44,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/15Puzzle/static/media/Layer-13.704ce266.png"
   },
   {
-    "revision": "6173263f448c775f217dcf34dd76e4a0",
-    "url": "/15Puzzle/static/media/Layer-14.6173263f.png"
+    "revision": "1346d896fb5c9558709798e2b779564d",
+    "url": "/15Puzzle/static/media/Layer-14.1346d896.png"
   },
   {
     "revision": "b131c440baa4ccafd94fe3bb56e4ada9",
@@ -84,11 +84,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/15Puzzle/static/media/Layer-9.fd6f9cd5.png"
   },
   {
-    "revision": "74979afd9c31aa5840320e4364f5e450",
-    "url": "/15Puzzle/static/media/frame-2.74979afd.png"
+    "revision": "d33cd9e16ad47bf2789360e0f12061f5",
+    "url": "/15Puzzle/static/media/frame-2.d33cd9e1.png"
   },
   {
-    "revision": "739ce3425f5d1b897760f64df166a8b2",
-    "url": "/15Puzzle/static/media/num.739ce342.jpg"
+    "revision": "778f471616b8ee104648bfaaf36249bc",
+    "url": "/15Puzzle/static/media/num.778f4716.jpg"
   }
 ]);

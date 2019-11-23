@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/15Puzzle/static/css/main.81896f73.chunk.css",
+    "main.css": "/15Puzzle/static/css/main.68e98306.chunk.css",
     "main.js": "/15Puzzle/static/js/main.ebbeca0a.chunk.js",
     "main.js.map": "/15Puzzle/static/js/main.ebbeca0a.chunk.js.map",
     "runtime-main.js": "/15Puzzle/static/js/runtime-main.843573b5.js",
@@ -8,15 +8,15 @@
     "static/js/2.0ead719f.chunk.js": "/15Puzzle/static/js/2.0ead719f.chunk.js",
     "static/js/2.0ead719f.chunk.js.map": "/15Puzzle/static/js/2.0ead719f.chunk.js.map",
     "index.html": "/15Puzzle/index.html",
-    "precache-manifest.53c9ea668b6adb59dc39bc429116bb91.js": "/15Puzzle/precache-manifest.53c9ea668b6adb59dc39bc429116bb91.js",
+    "precache-manifest.8830664335718f51bd9b62b27bcf3bbc.js": "/15Puzzle/precache-manifest.8830664335718f51bd9b62b27bcf3bbc.js",
     "service-worker.js": "/15Puzzle/service-worker.js",
-    "static/css/main.81896f73.chunk.css.map": "/15Puzzle/static/css/main.81896f73.chunk.css.map",
-    "static/media/main.scss": "/15Puzzle/static/media/num.739ce342.jpg"
+    "static/css/main.68e98306.chunk.css.map": "/15Puzzle/static/css/main.68e98306.chunk.css.map",
+    "static/media/main.scss": "/15Puzzle/static/media/num.778f4716.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.843573b5.js",
     "static/js/2.0ead719f.chunk.js",
-    "static/css/main.81896f73.chunk.css",
+    "static/css/main.68e98306.chunk.css",
     "static/js/main.ebbeca0a.chunk.js"
   ]
 }
