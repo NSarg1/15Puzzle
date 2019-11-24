@@ -1,18 +1,18 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1c6d9e3a9c4927138f6292a56aa4536f",
+    "revision": "9089694a8cfe4ed19bad5be0eaa83df9",
     "url": "/15Puzzle/index.html"
   },
   {
-    "revision": "791fc0b812fc3dbabeae",
-    "url": "/15Puzzle/static/css/main.da3a4216.chunk.css"
+    "revision": "f5a2125742d8ff713c06",
+    "url": "/15Puzzle/static/css/main.498bcb52.chunk.css"
   },
   {
     "revision": "00be8a4cd04b049c34b7",
     "url": "/15Puzzle/static/js/2.143fba50.chunk.js"
   },
   {
-    "revision": "791fc0b812fc3dbabeae",
+    "revision": "f5a2125742d8ff713c06",
     "url": "/15Puzzle/static/js/main.3af3c22b.chunk.js"
   },
   {
@@ -84,8 +84,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/15Puzzle/static/media/Layer-9.fd6f9cd5.png"
   },
   {
-    "revision": "c4a8a05cd2899a757710d9faa0cc0c41",
-    "url": "/15Puzzle/static/media/bg.c4a8a05c.jpg"
+    "revision": "417f65c68e2798fe82ea70f5367221a3",
+    "url": "/15Puzzle/static/media/bg.417f65c6.jpg"
   },
   {
     "revision": "d33cd9e16ad47bf2789360e0f12061f5",
