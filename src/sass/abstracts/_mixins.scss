@@ -1,5 +1,43 @@
 @mixin transformFix {
     -webkit-backface-visibility: hidden;
-    -webkit-transform: translateZ(0) scale(1.0, 1.0);
-    transform: translateZ(0);
+            backface-visibility: hidden;
+    -webkit-transform: translateZ(0) scale(1, 1);
+            transform: translateZ(0) scale(1, 1);
+}
+
+@mixin textBgColor {
+    display: inline-block;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.602)), to(rgba(0, 0, 0, 0.637))),
+        url(../assets/num.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.602), rgba(0, 0, 0, 0.637)),
+        url(../assets/num.jpg);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+@mixin flexCenter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+@mixin bgColor {
+    background: #606c88; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-gradient(
+        linear,
+        left top, right top,
+        from(#3f4c6b),
+        to(#606c88)
+    );
+    background: linear-gradient(
+        to right,
+        #3f4c6b,
+        #606c88
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }

@@ -1,0 +1,19 @@
+.btn {
+    @include flexCenter;
+    padding: 1.5rem;
+    border-radius: 3px;
+    cursor: pointer;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    width: 20rem;
+
+    &-white{
+        margin: 0 3rem;
+        color: $color-main-white;
+        border: 3px solid $color-main-white;
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.609);
+            color: rgb(26, 26, 26);
+        }
+    }
+}

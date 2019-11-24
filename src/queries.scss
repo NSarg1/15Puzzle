@@ -1,0 +1,89 @@
+/* Big tablet to 1200px (widths smaller taht the 1140px row) */
+@media only screen and (max-width: 1200px) {
+    html {
+        font-size: 64.5%;
+    }
+    .GameInit {
+        top: 4rem;
+        left: 23.5rem;
+    }
+}
+
+/* Small tablet to big tablet: from 768px to 1023px */
+@media only screen and (max-width: 1023px) {
+    html {
+        font-size: 60%;
+    }
+}
+
+/* Small phones to small tablets: from 481px to 767px */
+@media only screen and (max-width: 767px) {
+    html {
+        font-size: 47%;
+    }
+    .Tile .item {
+        cursor: default;
+    }
+    .btn-white {
+        margin: 0 2rem;
+    }
+}
+
+
+
+/* Small phones: from 0 to 480px */
+@media only screen and (max-width: 480px) {
+    html {
+        font-size: 45%;
+    }
+    
+    .GameInit .Tile .item {
+        cursor: default;
+    }
+
+    .GameInit {
+        top: 4rem;
+        left: 25rem;
+    }
+    .btn-white {
+        margin: 0 2rem;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    html {
+        font-size: 45%;
+    }
+
+    .GameInit .Tile .item {
+        cursor: default;
+    }
+
+    .GameInit {
+        top: 4rem;
+        left: 25rem;
+    }
+   
+}
+
+@media only screen and (max-width: 380px) {
+    html {
+        font-size: 40%;
+    }
+
+    .GameInit .Tile .item {
+        cursor: default;
+    }
+    .TileContainer {
+        width: 45rem;
+        height: 45rem;
+    }
+    .GameInit {
+        top: 6rem;
+        left: 30rem;
+    }
+
+    .btn-white {
+        margin: 0 2rem;
+    }
+}

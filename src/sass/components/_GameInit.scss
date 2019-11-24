@@ -1,0 +1,26 @@
+.GameInit {
+    position: absolute;
+    top: 4rem;
+    left: 24.5rem;
+    cursor: pointer;
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: transparent;
+    opacity: 0;
+    text-shadow: 0 0 12px rgba(0, 0, 0, 0.383);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    @include flexCenter;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    -webkit-transform: translate(-50%, 0) rotate(-36deg);
+            transform: translate(-50%, 0) rotate(-36deg);
+    background-image: url(../assets/text.jpg);
+    -webkit-background-clip: text;
+            background-clip: text;
+
+    &_btn {
+        margin: 1rem 0;
+    }
+}

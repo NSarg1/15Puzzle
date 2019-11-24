@@ -1,0 +1,44 @@
+.Welcome {
+    color: $color-main-white;
+    position: relative;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    @include flexCenter;
+    
+
+    &_title {
+        @include flexCenter;
+        @include transformFix;
+        -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+        }
+  
+
+    &_instructions {
+        opacity: 0;
+        text-align: justify;
+        @include flexCenter;
+        line-height: 3rem;
+        font-size: 1.6rem;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 5px;
+        width: 60rem;
+        
+        p {
+            display: inline-block;
+            margin: 5rem;
+        }
+    }
+
+}
+
+
+

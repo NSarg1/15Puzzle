@@ -1,14 +1,18 @@
-@import "./sass/base/reset.scss";
+@import "./sass/base/reset";
+@import "./sass/base/index";
+
 @import "./sass/abstracts/variables";
 @import "./sass/abstracts/mixins";
-
-
-@import "./sass/abstracts/animations.scss";
+@import "./sass/abstracts/animations";
  
-@import "./sass/base/index.scss";
+@import "./sass/base/index";
+
+@import "./sass/components/button";
+@import "./sass/components/TileContainer";
+@import "./sass/components/Tile";
+@import "./sass/components/Welcome";
+@import "./sass/components/GameInit";
 
 
-@import "./sass/components/TileContainer.scss";
-@import "./sass/components/Tile.scss";
+@import "./sass/pages/App";
 
-@import "./sass/pages/App.scss";

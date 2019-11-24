@@ -1,6 +1,6 @@
-let rndNum, rndNumArr, doesExist, data;
+let rndNum, rndNumArr, doesExist;
 rndNumArr = [];
-data = [
+export const data = [
     { id: 0, num: 1, animate: null },
     { id: 1, num: 2, animate: null },
     { id: 2, num: 3, animate: null },
@@ -19,7 +19,7 @@ data = [
     { id: 15, num: 16, animate: null }
 ];
 
-const rndNumGenerator = () => {
+export const rndNumGenerator = () => {
     rndNum = Math.floor(Math.random() * 16 + 1);
     doesExist = rndNumArr.find(el => el === rndNum);
 
@@ -39,5 +39,3 @@ data.forEach((el, ind) => {
     }
     el.num = rndNumArr[ind];
 });
-
-export default data;
