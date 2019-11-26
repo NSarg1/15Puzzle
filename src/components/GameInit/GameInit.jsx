@@ -7,8 +7,6 @@ const GameInit = ({ gameReset, start }) => {
     }
     style = style.join(' ');
 
-    console.log(`This is GamInit style ${style}`);
-
     return (
         <div className={style}>
             <div className="GameInit_btn" onClick={() => gameReset()}>

@@ -10,15 +10,14 @@ const Welcome = ({ doesShow, click, gameInit }) => {
     }
 
     instructionStyle = instructionStyle.join(' ');
-    console.log(instructionStyle);
     return (
         <div className="Welcome">
             <div className="Welcome_title">
                 <div className="btn btn-white" onClick={() => gameInit()}>
-                    <h1 >Start</h1>
+                    Start
                 </div>
                 <div className="btn btn-white" onClick={() => click()}>
-                    <h1 >Instructions</h1>
+                    Instructions
                 </div>
             </div>
             <div className={instructionStyle}>

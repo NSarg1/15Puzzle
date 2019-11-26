@@ -3,11 +3,13 @@ import { data } from './RndNumGenerator';
 import TileContainer from './components/TileContainer/TileContainer';
 import Welcome from './components/WelcomePage/Welcome';
 import GameInit from './components/GameInit/GameInit';
+import WinPage from './components/WinPage/WinPage';
 
 class App extends Component {
     constructor() {
         super();
         this.state = {
+            didWin: false,
             Welcome: {
                 intructionShow: null,
                 start: false
@@ -16,7 +18,8 @@ class App extends Component {
         };
     }
 
-    componentDidMount() {
+    componentDidUpdate() {
+        this.winCheker();
     }
 
     gameReset = () => {
@@ -83,9 +86,15 @@ class App extends Component {
         });
 
         if (
-            nullIndex - tileIndex === 1 ||
+            (nullIndex - tileIndex === 1 &&
+                tileIndex !== 3 &&
+                tileIndex !== 7 &&
+                tileIndex !== 11) ||
             nullIndex - tileIndex === 4 ||
-            tileIndex - nullIndex === 1 ||
+            (tileIndex - nullIndex === 1 &&
+                tileIndex !== 4 &&
+                tileIndex !== 8 &&
+                tileIndex !== 12) ||
             tileIndex - nullIndex === 4
         ) {
             this.setToNull();
@@ -109,14 +118,31 @@ class App extends Component {
     gameInit = () => {
         let Welcome = { ...this.state.Welcome };
         Welcome.start = true;
-        console.log(Welcome);
         this.setState({ Welcome: Welcome });
+    };
+
+    winCheker = () => {
+        let data = [...this.state.table];
+        let isTrueArr = [];
+        data.pop();
+        data.forEach(el => {
+            isTrueArr.push(el.num - 1 === el.id);
+        });
+
+        const didWin = isTrueArr.reduce((acc, cur) => {
+            return acc + cur;
+        });
+
+        if (didWin === 15) {
+            this.setState.didWin = true;
+        }
     };
 
     render() {
         return (
             <div className="App">
-                <GameInit gameReset={this.gameReset} start={this.state.Welcome.start}/>
+                {/* <WinPage /> */}
+                <GameInit gameReset={this.gameReset} start={this.state.Welcome.start} />
                 {this.state.Welcome.start === false ? (
                     <Welcome
                         gameInit={this.gameInit}

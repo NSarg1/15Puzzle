@@ -1,11 +1,9 @@
 $border-size: 0.3rem;
 $grid-gap-size: 0.3rem;
-$container-padding-size: 4rem;
-$container-width-length: 50rem;
-$container-font-size: 4rem;
-$box-padding-size: 0.7rem;
-$color-dark-grey: rgb(41, 41, 41);
-$color-font-main: #361616;
+$container-padding-size: 3rem;
+$container-width-length: 45rem;
+$container-font-size: 3.5rem;
+$box-padding-size: 0.5rem;
 
 
 $tile-size: ($container-width-length - ($container-padding-size*2 + $grid-gap-size*3 + $box-padding-size*2))/4;
@@ -13,4 +11,4 @@ $slide-size: $tile-size + $grid-gap-size;
 
 
 /*--------COLORS--------------*/
-$color-main-white: rgb(221, 221, 221);
+$color-main-white: rgb(241, 241, 241);

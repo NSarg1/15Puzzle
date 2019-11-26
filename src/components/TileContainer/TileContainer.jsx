@@ -3,10 +3,8 @@ import Tile from './Tile/Tile';
 
 const TileContainer = ({ table, click, start }) => {
     let initStyle = ['TileContainer'];
-    //    console.log(`Start value is ${start}`)
     if (start) {
         initStyle.push('zoomInCenter');
-        console.log(start);
     }
     initStyle = initStyle.join(' ');
     return (

@@ -1,35 +1,39 @@
 .TileContainer {
-    -ms-flex-negative: 0;
-        flex-shrink: 0;
+    position: absolute;
+    top: 23rem;
+    left: 50%;
+    flex-shrink: 0;
     font-family: 'Calistoga', cursive;
     font-weight: 700;
     font-size: $container-font-size;
     padding: $container-padding-size;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url(../assets/frame-2.png);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../assets/frame-2.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        url(../assets/frame-2.png);
     background-size: cover;
-    -webkit-box-shadow: inset 0 0 10px 4px rgba(0, 0, 0, 0.507);
-            box-shadow: inset 0 0 10px 4px rgba(0, 0, 0, 0.507);
+    box-shadow: inset 0 0 10px 4px rgba(0, 0, 0, 0.507);
     border-radius: 7px;
     width: $container-width-length;
     height: $container-width-length;
-    -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-    -webkit-transform: scale(0.5) translate(15vw, -30vh) rotate(15deg);
-            transform: scale(0.5) translate(15vw, -30vh) rotate(15deg);
+    backface-visibility: hidden;
+    transform: scale(0.6) translate(-50%, 0) rotate(15deg);
 
     &_box {
         width: 100%;
         height: 100%;
-        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))),
+        background-image: -webkit-gradient(
+                linear,
+                left top,
+                left bottom,
+                from(rgba(0, 0, 0, 0.5)),
+                to(rgba(0, 0, 0, 0.5))
+            ),
             url(../assets/Box.jpg);
         background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
             url(../assets/Box.jpg);
         background-repeat: no-repeat;
         background-size: cover;
-        -webkit-box-shadow: inset 0 0 6px 4px rgba(0, 0, 0, 0.5);
-                box-shadow: inset 0 0 6px 4px rgba(0, 0, 0, 0.5);
-       
+        box-shadow: inset 0 0 6px 4px rgba(0, 0, 0, 0.5);
+
         display: grid;
         grid-template-rows: repeat(4, 1fr);
         grid-template-columns: repeat(4, 1fr);
