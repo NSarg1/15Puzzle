@@ -1,4 +1,11 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 15Puzzle.
+
+15Puzzle is a very popular logic game.It's my version of it. Maybe you played it in your childhood. Let's play and feel nostalgic.
+
+## How to contribute
+The app created with Create-React-App. For additional packages please review package.json file.
+
 
 ## Available Scripts
 
