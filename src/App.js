@@ -64,8 +64,7 @@ class App extends Component {
             }
             el.num = rndNumArr[ind];
         });
-
-        this.setState({ table: data });
+        this.setState({ table: data, didWin: false });
     };
 
     setToNull = () => {
@@ -120,7 +119,6 @@ class App extends Component {
         Welcome.start = true;
         this.setState({ Welcome: Welcome });
     };
-    
 
     winCheker = () => {
         let data = [...this.state.table];
@@ -142,7 +140,7 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                {this.state.didWin === true ? <WinPage /> : null}
+                {this.state.didWin === true ? <WinPage gameReset={this.gameReset} /> : null}
                 <GameInit gameReset={this.gameReset} start={this.state.Welcome.start} />
                 {this.state.Welcome.start === false ? (
                     <Welcome

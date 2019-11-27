@@ -11,7 +11,6 @@
     &_title {
         @include flexCenter;
         @include transformFix;
-        backface-visibility: hidden;
     }
 
     &_instructions {
@@ -27,6 +26,7 @@
         background-color: rgba(0, 0, 0, 0.5);
         border-radius: 5px;
         width: 60rem;
+        backface-visibility: hidden;
 
         p {
             display: inline-block;
