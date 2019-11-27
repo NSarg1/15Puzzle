@@ -120,6 +120,7 @@ class App extends Component {
         Welcome.start = true;
         this.setState({ Welcome: Welcome });
     };
+    
 
     winCheker = () => {
         let data = [...this.state.table];
@@ -141,7 +142,7 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                {/* <WinPage /> */}
+                {this.state.didWin === true ? <WinPage /> : null}
                 <GameInit gameReset={this.gameReset} start={this.state.Welcome.start} />
                 {this.state.Welcome.start === false ? (
                     <Welcome

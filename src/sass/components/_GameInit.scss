@@ -1,19 +1,19 @@
 .GameInit {
+    font-family: 'Handlee', cursive;
+    font-size: 3.5rem;
+    letter-spacing: 1px;
+    font-weight: 700;
+    opacity: 0;  
     position: absolute;
     top:13rem;
     left: 25rem;
     cursor: pointer;
-    font-size: 3.5rem;
-    letter-spacing: 1px;
-    font-weight: 700;
     color: #c9ba8f;
     text-shadow: 0 0 8px rgba(0, 0, 0, 0.568);
-    opacity: 0;
-    
     display: flex;
     @include flexCenter;
     backface-visibility: hidden;
-    transform: translate(-50%, 0) rotate(-36deg);
+    transform: translate(-80%, -40%) rotate(-36deg);
 
     &_btn {
         margin: 1rem 0;

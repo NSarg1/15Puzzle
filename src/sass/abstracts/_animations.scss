@@ -69,10 +69,6 @@
 }
 
 @keyframes slideFromTop {
-    0% {
-        opacity: 0;
-        transform: translate(-50%, 0) rotate(-35deg);
-    }
     100% {
         opacity: 1;
         transform: translate(-50%, 100%) rotate(-33deg);
@@ -87,11 +83,6 @@
 /*---------------Instruction animation----------------*/
 
 @keyframes slideIn {
-    0% {
-        opacity: 0;
-        transform: translateX(-50%);
-    }
-
     100% {
         bottom: 8%;
         transform: translate(-50%, -50%);

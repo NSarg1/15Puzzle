@@ -1,17 +1,23 @@
 .WinPage {
+    font-family: 'Handlee', cursive;
     position: absolute;
     top: 0;
     left: 50%;
     width: 100vw;
     height: 100vh;
     z-index: 9999;
-    background-color: #ffffff60;
+    background-color: rgba(0, 0, 0, 0.5);
     @include flexCenter;
     flex-direction: column;
     transform: translateX(-50%);
 
     &_title {
-        font-size: 4rem;
+        font-size: 7rem;
+        font-weight: 500;
+        word-spacing: 0.5rem;
+        color: $color-main-white;
+        margin-bottom: 8rem;
+        text-align: center;
     }
 
     &_image {
@@ -22,11 +28,12 @@
         }
         .fig {
             position: absolute;
-            bottom: 3.8rem;
+            bottom: 5%;
             left: 50%;
             transform: translateX(-50%);
-            font-weight: 500;
-            font-size: 2.5rem;
+            font-weight: 700;
+            font-size: 5rem;
+            color: #ffcc66;
         }
     }
 }
