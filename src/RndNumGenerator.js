@@ -1,5 +1,4 @@
-let rndNum, rndNumArr, doesExist;
-rndNumArr = [];
+let rndNumArr = [];
 export const data = [
     { id: 0, num: 1, animate: null },
     { id: 1, num: 2, animate: null },
@@ -16,22 +15,23 @@ export const data = [
     { id: 12, num: 13, animate: null },
     { id: 13, num: 14, animate: null },
     { id: 14, num: 15, animate: null },
-    { id: 15, num: 16, animate: null }
+    { id: 15, num: 16, animate: null },
 ];
 
-export const rndNumGenerator = () => {
-    rndNum = Math.floor(Math.random() * 16 + 1);
-    doesExist = rndNumArr.find(el => el === rndNum);
+const rndNumGenerator = arr => {
+    let rndNum = Math.floor(Math.random() * 16 + 1);
+    let doesExist = arr.find(el => el === rndNum);
 
     if (doesExist === undefined) {
-        rndNumArr.push(rndNum);
+        arr.push(rndNum);
     } else {
-        return rndNumGenerator();
+        return rndNumGenerator(arr);
     }
+    return arr;
 };
 
 for (let i = 0; i < 16; i++) {
-    rndNumGenerator();
+    rndNumGenerator(rndNumArr);
 }
 
 data.forEach((el, ind) => {

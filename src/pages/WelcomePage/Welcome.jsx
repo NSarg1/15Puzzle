@@ -13,10 +13,10 @@ const Welcome = ({ doesShow, click, gameInit }) => {
     return (
         <div className="Welcome">
             <div className="Welcome_title">
-                <div className="btn btn-white" onClick={() => gameInit()}>
+                <div className="btn btn-white" onClick={gameInit}>
                     Start
                 </div>
-                <div className="btn btn-white" onClick={() => click()}>
+                <div className="btn btn-white" onClick={click}>
                     Instructions
                 </div>
             </div>

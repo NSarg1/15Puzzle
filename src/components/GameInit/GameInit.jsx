@@ -9,7 +9,7 @@ const GameInit = ({ gameReset, start }) => {
 
     return (
         <div className={style}>
-            <div className="GameInit_btn" onClick={() => gameReset()}>
+            <div className="GameInit_btn" onClick={gameReset}>
                 Start again
             </div>
         </div>
