@@ -4,16 +4,17 @@
 @import "./sass/abstracts/variables";
 @import "./sass/abstracts/mixins";
 @import "./sass/abstracts/animations";
- 
+
 @import "./sass/base/index";
 
 @import "./sass/components/button";
-@import "./sass/components/TileContainer";
-@import "./sass/components/Tile";
-@import "./sass/components/Welcome";
-@import "./sass/components/GameInit";
-@import "./sass/components/WinPage";
+@import "./components/TileContainer/TileContainer";
+@import "./components/TileContainer/Tile/Tile";
+@import "./components/GameInit/GameInit";
+
+@import "./pages/WelcomePage/Welcome";
+@import "./pages/WinPage/WinPage";
 
 
-@import "./sass/pages/App";
-
+// App
+@import "./App/App.scss";

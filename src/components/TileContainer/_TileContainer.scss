@@ -8,7 +8,7 @@
     font-size: $container-font-size;
     padding: $container-padding-size;
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-        url(../assets/frame-2.png);
+        url(../../sass/assets/frame-2.png);
     background-size: cover;
     box-shadow: inset 0 0 10px 4px rgba(0, 0, 0, 0.507);
     border-radius: 7px;
@@ -20,7 +20,7 @@
     &_box {
         width: 100%;
         height: 100%;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/Box.jpg);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../sass/assets/box.jpg);
         box-shadow: inset 0 0 6px 4px rgba(0, 0, 0, 0.5);
         background-repeat: no-repeat;
         background-size: cover;

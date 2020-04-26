@@ -1,55 +1,55 @@
 /******************************************/
 /*********GAME LOGIC ANIMATIONS************/
 .slideToBottom {
-    animation: slideToBottom forwards ease;
+	animation: slideToBottom forwards ease;
 }
 
 .slideToTop {
-    animation: slideToTop forwards ease;
+	animation: slideToTop forwards ease;
 }
 
 .slideToRight {
-    animation: slideToRight forwards ease;
+	animation: slideToRight forwards ease;
 }
 
 .slideToLeft {
-    animation: slideToLeft forwards ease;
+	animation: slideToLeft forwards ease;
 }
 
 @keyframes slideToBottom {
-    0% {
-        transform: translateY(-$slide-size);
-    }
-    100% {
-        transform: translate(0);
-    }
+	0% {
+		transform: translateY(-$slide-size);
+	}
+	100% {
+		transform: translate(0);
+	}
 }
 
 @keyframes slideToTop {
-    0% {
-        transform: translateY($slide-size);
-    }
-    100% {
-        transform: translate(0);
-    }
+	0% {
+		transform: translateY($slide-size);
+	}
+	100% {
+		transform: translate(0);
+	}
 }
 
 @keyframes slideToRight {
-    0% {
-        transform: translateX($slide-size);
-    }
-    100% {
-        transform: translate(0);
-    }
+	0% {
+		transform: translateX($slide-size);
+	}
+	100% {
+		transform: translate(0);
+	}
 }
 
 @keyframes slideToLeft {
-    0% {
-        transform: translateX(-$slide-size);
-    }
-    100% {
-        transform: translate(0);
-    }
+	0% {
+		transform: translateX(-$slide-size);
+	}
+	100% {
+		transform: translate(0);
+	}
 }
 
 /************GAME LOGIC ANIMATIONS************/
@@ -59,56 +59,60 @@
 /************* START ANIMATIONS *************/
 
 @keyframes zoomInCenter {
-    100% {
-        transform: scale(1) translate(-50%) rotate(0);
-    }
+	100% {
+		transform: scale(1) translate(-50%) rotate(0);
+	}
 }
 
 .zoomInCenter {
-    animation: zoomInCenter 1.5s ease-in-out forwards;
+	animation: zoomInCenter 1.5s ease-in-out forwards;
 }
 
 @keyframes slideFromTop {
-    100% {
-        opacity: 1;
-        transform: translate(-50%, 100%) rotate(-33deg);
-    }
+	100% {
+		opacity: 1;
+		transform: translate(-50%, 100%) rotate(-33deg);
+	}
 }
 
 .slideFromTop {
-    animation: slideFromTop 2s forwards ease;
+	animation: slideFromTop 2s forwards ease;
 }
 
 /*---------------------------------------------------*/
 /*---------------Instruction animation----------------*/
 
+// HEIGHT FROM BOTTOM
+
+$from-bottom-height: 15%;
+
 @keyframes slideIn {
-    100% {
-        bottom: 8%;
-        transform: translate(-50%, -50%);
-        opacity: 1;
-    }
+	100% {
+		bottom: $from-bottom-height;
+		transform: translate(-50%, -50%);
+		opacity: 1;
+	}
 }
 
 .slideIn {
-    animation: slideIn 0.6s forwards ease;
+	animation: slideIn 0.6s forwards ease;
 }
 
 @keyframes slideOut {
-    0% {
-        opacity: 1;
-        bottom: 8%;
-        transform: translate(-50%, -50%);
-    }
+	0% {
+		opacity: 1;
+		bottom: $from-bottom-height;
+		transform: translate(-50%, -50%);
+	}
 
-    100% {
-        opacity: 0;
-        transform: translateX(-50%);
-    }
+	100% {
+		opacity: 0;
+		transform: translateX(-50%);
+	}
 }
 
 .slideOut {
-    animation: slideOut 0.6s forwards ease;
+	animation: slideOut 0.6s forwards ease;
 }
 
 /*---------------Instruction animation----------------*/
