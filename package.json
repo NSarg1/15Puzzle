@@ -5,7 +5,7 @@
   "homepage": "http://NSarg7.github.io/15Puzzle",
   "dependencies": {
     "animate.css": "^3.7.2",
-    "node-sass": "^4.14.0",
+    "node-sass": "^7.0.0",
     "react": "^16.13.1",
     "react-animated-css": "^1.2.1",
     "react-dom": "^16.13.1",
