@@ -36,6 +36,11 @@ const Tile = (props) => {
             (tileIndex - nullIndex === 1 && tileIndex !== 4 && tileIndex !== 8 && tileIndex !== 12) ||
             tileIndex - nullIndex === 4
         ) {
+            // Add haptic feedback for valid tile move
+            if (navigator.vibrate) {
+                navigator.vibrate(50); // Vibrate for 50ms
+            }
+
             const newTable = setToNull(table);
             newTable[nullIndex].num = newTable[tileIndex].num;
             if (nullIndex - tileIndex === 1) newTable[nullIndex].animate = "slideToLeft";
