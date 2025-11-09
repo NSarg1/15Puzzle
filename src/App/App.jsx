@@ -28,6 +28,10 @@ const App = () => {
         });
 
         if (won === 15) {
+            // Add haptic feedback for winning
+            if (navigator.vibrate) {
+                navigator.vibrate([200, 100, 200, 100, 300]); // Celebratory vibration pattern
+            }
             setDidWin(true);
         }
     };
