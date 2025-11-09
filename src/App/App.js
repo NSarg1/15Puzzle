@@ -7,6 +7,7 @@ import WinPage from "../pages/WinPage/WinPage";
 // REDUX TOOLS
 import { connect } from "react-redux";
 import { updateTable } from "../redux/table/table.actions.js";
+import { generateSolvablePuzzle } from "../redux/table/table.data.js";
 
 class App extends Component {
     constructor(props) {
@@ -27,31 +28,16 @@ class App extends Component {
     }
 
     gameReset = () => {
-        let rndNumArr = [];
         const data = [...this.props.table];
 
-        const rndNumGenerator = (arr) => {
-            let rndNum = Math.floor(Math.random() * 16 + 1);
-            let doesExist = arr.find((el) => el === rndNum);
+        // Generate a new solvable puzzle
+        const newPuzzle = generateSolvablePuzzle();
 
-            if (doesExist === undefined) {
-                arr.push(rndNum);
-            } else {
-                return rndNumGenerator(arr);
-            }
-            return arr;
-        };
-
-        for (let i = 0; i < 16; i++) {
-            rndNumGenerator(rndNumArr);
-        }
-
+        // Update the data array with the new solvable puzzle
         data.forEach((el, ind) => {
-            if (rndNumArr[ind] === 16) {
-                rndNumArr[ind] = null;
-            }
-            el.num = rndNumArr[ind];
+            el.num = newPuzzle[ind];
         });
+
         this.props.updateTable(data);
         this.setState({ didWin: false });
     };
