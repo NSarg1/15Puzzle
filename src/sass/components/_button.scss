@@ -7,13 +7,20 @@
     border-radius: 3px;
     cursor: pointer;
     transition: 0.4s;
-    
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+
 
     &-white {
         color: $color-main-white;
         border: 3px solid $color-main-white;
         &:hover {
             background-color: rgba(255, 255, 255, 0.609);
+            color: rgb(26, 26, 26);
+        }
+        &:active {
+            background-color: rgba(255, 255, 255, 0.809);
             color: rgb(26, 26, 26);
         }
     }
@@ -25,6 +32,11 @@
         &:hover {
             color: $color-main-white;
             background-color: rgba(0, 0, 0, 0.623);
+            border: 3px solid $color-main-white;
+        }
+        &:active {
+            color: $color-main-white;
+            background-color: rgba(0, 0, 0, 0.823);
             border: 3px solid $color-main-white;
         }
     }
