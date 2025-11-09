@@ -1,4 +1,3 @@
-let rndNumArr = [];
 export const data = [
     { id: 0, num: 1, animate: null },
     { id: 1, num: 2, animate: null },
@@ -18,25 +17,80 @@ export const data = [
     { id: 15, num: 16, animate: null },
 ];
 
-const rndNumGenerator = arr => {
-    let rndNum = Math.floor(Math.random() * 16 + 1);
-    let doesExist = arr.find(el => el === rndNum);
-
-    if (doesExist === undefined) {
-        arr.push(rndNum);
-    } else {
-        return rndNumGenerator(arr);
+// Generate a solvable 15-puzzle configuration
+export const generateSolvablePuzzle = () => {
+    // Create array with numbers 1-16
+    let numbers = [];
+    for (let i = 1; i <= 16; i++) {
+        numbers.push(i);
     }
-    return arr;
+
+    // Shuffle the array using Fisher-Yates algorithm
+    for (let i = numbers.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [numbers[i], numbers[j]] = [numbers[j], numbers[i]];
+    }
+
+    // Check if the puzzle is solvable, if not, make it solvable
+    if (!isSolvable(numbers)) {
+        // Swap two non-blank tiles to change parity
+        // Find first two non-16 numbers and swap them
+        let firstIdx = -1;
+        let secondIdx = -1;
+
+        for (let i = 0; i < numbers.length; i++) {
+            if (numbers[i] !== 16) {
+                if (firstIdx === -1) {
+                    firstIdx = i;
+                } else if (secondIdx === -1) {
+                    secondIdx = i;
+                    break;
+                }
+            }
+        }
+
+        // Swap to fix solvability
+        [numbers[firstIdx], numbers[secondIdx]] = [numbers[secondIdx], numbers[firstIdx]];
+    }
+
+    // Convert 16 to null for empty space
+    return numbers.map(num => num === 16 ? null : num);
 };
 
-for (let i = 0; i < 16; i++) {
-    rndNumGenerator(rndNumArr);
-}
+// Check if a 15-puzzle configuration is solvable
+const isSolvable = (arr) => {
+    let inversions = 0;
+    let blankRow = 0;
 
-data.forEach((el, ind) => {
-    if (rndNumArr[ind] === 16) {
-        rndNumArr[ind] = null;
+    // Count inversions and find blank position
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === 16) {
+            // Blank tile - find which row it's in (0-indexed from top)
+            blankRow = Math.floor(i / 4);
+            continue;
+        }
+
+        for (let j = i + 1; j < arr.length; j++) {
+            if (arr[j] !== 16 && arr[i] > arr[j]) {
+                inversions++;
+            }
+        }
     }
-    el.num = rndNumArr[ind];
+
+    // For 15-puzzle (4x4 grid):
+    // - If blank is on even row from bottom (odd row from top), inversions must be even
+    // - If blank is on odd row from bottom (even row from top), inversions must be odd
+    const blankRowFromBottom = 3 - blankRow;
+
+    if (blankRowFromBottom % 2 === 0) {
+        return inversions % 2 === 0;
+    } else {
+        return inversions % 2 === 1;
+    }
+};
+
+// Initialize with a solvable puzzle
+const initialPuzzle = generateSolvablePuzzle();
+data.forEach((el, ind) => {
+    el.num = initialPuzzle[ind];
 });
