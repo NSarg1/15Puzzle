@@ -1,34 +1,45 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import TileContainer from "../components/TileContainer/TileContainer";
 import Welcome from "../pages/WelcomePage/Welcome";
 import GameInit from "../components/GameInit/GameInit";
 import WinPage from "../pages/WinPage/WinPage";
-
-// REDUX TOOLS
-import { connect } from "react-redux";
 import { updateTable } from "../redux/table/table.actions.js";
 import { generateSolvablePuzzle } from "../redux/table/table.data.js";
 
-class App extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            didWin: false,
-            Welcome: {
-                intructionShow: null,
-                start: false,
-            },
-        };
-    }
+const App = () => {
+    const [didWin, setDidWin] = useState(false);
+    const [instructionShow, setInstructionShow] = useState(null);
+    const [start, setStart] = useState(false);
 
-    componentDidUpdate() {
-        if (this.state.didWin === false) {
-            this.winCheker();
+    const table = useSelector((state) => state.table.tableData);
+    const dispatch = useDispatch();
+
+    const winChecker = () => {
+        const data = [...table];
+        const isTrueArr = [];
+        data.pop();
+        data.forEach((el) => {
+            isTrueArr.push(el.num - 1 === el.id);
+        });
+
+        const won = isTrueArr.reduce((acc, cur) => {
+            return acc + cur;
+        });
+
+        if (won === 15) {
+            setDidWin(true);
         }
-    }
+    };
 
-    gameReset = () => {
-        const data = [...this.props.table];
+    useEffect(() => {
+        if (!didWin) {
+            winChecker();
+        }
+    }, [table, didWin]);
+
+    const gameReset = () => {
+        const data = [...table];
 
         // Generate a new solvable puzzle
         const newPuzzle = generateSolvablePuzzle();
@@ -38,70 +49,34 @@ class App extends Component {
             el.num = newPuzzle[ind];
         });
 
-        this.props.updateTable(data);
-        this.setState({ didWin: false });
+        dispatch(updateTable(data));
+        setDidWin(false);
     };
 
-    toggleInstruction = () => {
-        let Welcome = { ...this.state.Welcome };
-        Welcome.intructionShow = !this.state.Welcome.intructionShow;
-        this.setState({ Welcome: Welcome });
+    const toggleInstruction = () => {
+        setInstructionShow(!instructionShow);
     };
 
-    gameInit = () => {
-        let Welcome = { ...this.state.Welcome };
-        Welcome.start = true;
-        this.setState({ Welcome: Welcome });
+    const gameInit = () => {
+        setStart(true);
     };
 
-    winCheker = () => {
-        let data = [...this.props.table];
-        let isTrueArr = [];
-        data.pop();
-        data.forEach((el) => {
-            isTrueArr.push(el.num - 1 === el.id);
-        });
+    console.log({ table });
 
-        const didWin = isTrueArr.reduce((acc, cur) => {
-            return acc + cur;
-        });
+    return (
+        <div className="App">
+            {didWin === true ? <WinPage gameReset={gameReset} /> : null}
+            <GameInit gameReset={gameReset} start={start} />
+            {start === false ? (
+                <Welcome
+                    gameInit={gameInit}
+                    doesShow={instructionShow}
+                    click={toggleInstruction}
+                />
+            ) : null}
+            <TileContainer start={start} />
+        </div>
+    );
+};
 
-        if (didWin === 15) {
-            this.setState({ didWin: true });
-        }
-    };
-
-    render() {
-        const {
-            Welcome: { intructionShow, start },
-            didWin,
-        } = this.state;
-
-        console.log(this.props);
-
-        return (
-            <div className="App">
-                {didWin === true ? <WinPage gameReset={this.gameReset} /> : null}
-                <GameInit gameReset={this.gameReset} start={start} />
-                {start === false ? (
-                    <Welcome
-                        gameInit={this.gameInit}
-                        doesShow={intructionShow}
-                        click={() => this.toggleInstruction}
-                    />
-                ) : null}
-                <TileContainer start={start} />
-            </div>
-        );
-    }
-}
-
-const mapStateToProps = (state) => ({
-    table: state.table.tableData,
-});
-
-const mapDispatchToProps = (dispatch) => ({
-    updateTable: (newTable) => dispatch(updateTable(newTable)),
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default App;
