@@ -22,6 +22,11 @@ const Tile = (props) => {
     };
 
     const changeNum = (id) => {
+        // Vibrate on any tile touch for immediate feedback
+        if (navigator.vibrate) {
+            navigator.vibrate(30); // Light vibration on touch
+        }
+
         const table = [...props.table];
         let tileIndex = table.findIndex((el) => {
             return el.id === id;
@@ -36,9 +41,9 @@ const Tile = (props) => {
             (tileIndex - nullIndex === 1 && tileIndex !== 4 && tileIndex !== 8 && tileIndex !== 12) ||
             tileIndex - nullIndex === 4
         ) {
-            // Add haptic feedback for valid tile move
+            // Add stronger haptic feedback for valid tile move
             if (navigator.vibrate) {
-                navigator.vibrate(50); // Vibrate for 50ms
+                navigator.vibrate(50); // Stronger vibration for successful move
             }
 
             const newTable = setToNull(table);
